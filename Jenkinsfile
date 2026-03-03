@@ -9,7 +9,7 @@ pipeline {
         appVersion = ""
     }
     options {
-        timeout (time: 10, unit: 'SECONDS')
+        timeout (time: 120, unit: 'SECONDS')
         disableConcurrentBuilds()
     }
     
