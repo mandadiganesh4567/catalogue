@@ -23,7 +23,7 @@ pipeline {
                  }
             }
         }
-        stage('TInstall Dependenices') {
+        stage('Install Dependenices') {
             steps {
                 script {
                     sh """
