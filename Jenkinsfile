@@ -44,6 +44,18 @@ pipeline {
             }
         }
         }
+        stage('Sonar Scan'){
+            environment {
+                def scannerHome = tool 'sonar-8.0'
+            }
+            steps {
+                script{
+                    withSonarQubeEnv('sonar-token') {
+                        sh  "${scannerHome}/bin/sonar-scanner"
+                    }
+                }
+            }
+        }
         stage('Build Image') {
             steps {
                 script {
